@@ -55,6 +55,9 @@ function composer_autoload() {
 }
 add_action( 'init', 'composer_autoload', 10 );
 
+// Disable Gutenberg
+ add_filter('use_block_editor_for_post', '__return_false', 10);
+
 // Add libs
 
 get_template_part( 'lib/custom-gallery' );
