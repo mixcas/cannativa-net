@@ -1,0 +1,52 @@
+<?php return array(
+    'root' => array(
+        'pretty_version' => '1.0.0+no-version-set',
+        'version' => '1.0.0.0',
+        'type' => 'library',
+        'install_path' => __DIR__ . '/../../',
+        'aliases' => array(),
+        'reference' => NULL,
+        'name' => 'igv/igv',
+        'dev' => true,
+    ),
+    'versions' => array(
+        'alexis-magina/cmb2-field-post-search-ajax' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../alexis-magina/cmb2-field-post-search-ajax',
+            'aliases' => array(
+                0 => '9999999-dev',
+            ),
+            'reference' => '4c8120e5919339fc692acd3823f91f0381040905',
+            'dev_requirement' => false,
+        ),
+        'cmb2/cmb2' => array(
+            'pretty_version' => 'v2.9.0',
+            'version' => '2.9.0.0',
+            'type' => 'wordpress-plugin',
+            'install_path' => __DIR__ . '/../cmb2/cmb2',
+            'aliases' => array(),
+            'reference' => 'cacbc8cedbfdf8ffe0e840858e6860f9333c33f2',
+            'dev_requirement' => false,
+        ),
+        'fightbulc/moment' => array(
+            'pretty_version' => '1.33.0',
+            'version' => '1.33.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../fightbulc/moment',
+            'aliases' => array(),
+            'reference' => '435d68e481ab0a716358926fb51966e696d297e3',
+            'dev_requirement' => false,
+        ),
+        'igv/igv' => array(
+            'pretty_version' => '1.0.0+no-version-set',
+            'version' => '1.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../../',
+            'aliases' => array(),
+            'reference' => NULL,
+            'dev_requirement' => false,
+        ),
+    ),
+);
