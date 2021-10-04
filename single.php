@@ -13,7 +13,7 @@ if (have_posts()) {
     the_post();
 ?>
 
-        <article <?php post_class('grid-item item-s-12'); ?> id="post-<?php the_ID(); ?>">
+        <article <?php post_class('grid-item item-s-12 margin-bottom-large'); ?> id="post-<?php the_ID(); ?>">
           <header class="header-image-holder margin-bottom-mid">
             <div class="image-wrapper">
               <?php echo get_the_post_thumbnail($post->ID, 'single-featured'); ?>
@@ -60,10 +60,6 @@ if (have_posts()) {
             <aside class="grid-item item-s-12 item-m-3">
             </aside>
           </div>
-
-
-
-
         </article>
 
 <?php
@@ -75,7 +71,9 @@ if (have_posts()) {
 } ?>
 
       </div>
+
     </div>
+    <?php get_template_part('partials/related'); ?>
   </section>
 
   <?php get_template_part('partials/pagination'); ?>
