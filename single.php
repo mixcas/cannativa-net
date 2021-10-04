@@ -14,24 +14,48 @@ if (have_posts()) {
 ?>
 
         <article <?php post_class('grid-item item-s-12'); ?> id="post-<?php the_ID(); ?>">
-          <header id="single-header-image-holder">
-            <?php echo get_the_post_thumbnail($post->ID, 'full'); ?>
-            <div class="grid-row justify-center">
+          <header class="header-image-holder margin-bottom-mid">
+            <div class="image-wrapper">
+              <?php echo get_the_post_thumbnail($post->ID, 'single-featured'); ?>
+            </div>
+            <div class="title-holder grid-row justify-center text-align-center margin-bottom-basic">
               <div class="grid-item item-s-12 item-m-8">
-                <h1 class="font-size-large text-align-center">
+                <h1 class="title font-size-large font-bold font-uppercase text-align-center">
                   <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
-                <div class="text-align-center">
-                  <?php the_date(); ?>
-                  <?php echo get_the_author(); ?>
+                <div class="font-size-mid font-capitalize">
+                  <?php the_date(); ?> | <?php echo get_the_author(); ?>
                 </div>
               </div>
             </div>
           </header>
 
           <div class="grid-row justify-center">
-            <div class="single-content grid-item item-s-12 item-m-7">
+            <div class="grid-item item-s-12 item-m-7">
+              <div class="single-content">
               <?php the_content(); ?>
+              </div>
+
+              <?php // TAGS
+              $posttags = get_the_tags();
+              if ($posttags) {
+              ?>
+                <ul class="tags-list font-bold font-size-mid font-uppercase">
+              <?php
+                foreach($posttags as $tag) {
+              ?>
+                <li>
+                  <a href="#">
+                    <?php echo $tag->name; ?>
+                  </a>
+                </li>
+              <?php
+                }
+              ?>
+                </ul>
+              <?php
+              }
+              ?>
             </div>
             <aside class="grid-item item-s-12 item-m-3">
             </aside>
