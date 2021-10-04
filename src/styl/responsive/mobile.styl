@@ -19,3 +19,36 @@ grid-maker(96%, $gutter, s)
 space-maker($margin-micro, $margin-tiny, $margin-small, $margin-basic, $margin-mid, $margin-large)
 
 font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid, $font-size-small, $font-size-tiny)
+
+
+// NOTE: This will move to desktop or something
+#header
+  background: $color-green
+
+.logo-container
+  display: flex
+  height: 2.2rem
+
+  svg path
+    fill: $color-black !important
+
+  svg:first-child
+    height: 100%
+    margin-right: 0.5rem
+
+  svg:last-child
+    height: 36%
+
+.desktop-nav-right
+  display: flex
+  align-items: center
+
+.desktop-menu-link
+  ul
+    display: flex
+
+  li
+    padding: 0 0.4rem
+    border-right: 3px solid
+  li:last-child
+    border-right: none

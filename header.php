@@ -32,6 +32,46 @@ get_template_part('partials/seo');
 
 <section id="main-container">
 
-  <header id="header">
-    <h1><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
-  </header>
+  <nav id="header" class="padding-bottom-small padding-top-small">
+    <div class="container grid-row justify-between">
+      <div class="grid-item">
+        <div class="logo-container align-items-center">
+          <?php get_template_part('partials/svg/Isotipo-Alabaster.svg'); ?>
+          <?php get_template_part('partials/svg/Logotipo-Alabaster.svg'); ?>
+        </div>
+
+        <h1 class="u-visuallyhidden"><a href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a></h1>
+      </div>
+      <div class="desktop-nav-right grid-item">
+        <div class="desktop-menu-link font-size-mid font-bold font-uppercase">
+          <ul>
+            <li>
+              <a href="#">
+                Revista
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Quiénes somos
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Contacto
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Dona
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
