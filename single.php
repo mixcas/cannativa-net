@@ -4,14 +4,18 @@ get_header();
 
 <main id="main-content">
   <section id="posts">
-    <div class="container">
-      <div class="grid-row">
 
 <?php
 if (have_posts()) {
   while (have_posts()) {
     the_post();
+    $post_main_category = get_the_category();
+    $post_main_category_name = $post_main_category[0]->cat_name;
 ?>
+    <?php get_template_part('partials/single-cat-menu'); ?>
+    <div class="container">
+      <div class="grid-row">
+
 
         <article <?php post_class('grid-item item-s-12 margin-bottom-large'); ?> id="post-<?php the_ID(); ?>">
           <header class="header-image-holder margin-bottom-mid">
@@ -20,6 +24,9 @@ if (have_posts()) {
             </div>
             <div class="title-holder grid-row justify-center text-align-center margin-bottom-basic">
               <div class="grid-item item-s-12 item-m-8">
+                <h3 class="title font-size-basic font-bold font-uppercase text-align-center spacing-wide color-red">
+                <a href="<?php the_permalink() ?>"><?php echo $post_main_category_name; ?></a>
+                </h3>
                 <h1 class="title font-size-large font-bold font-uppercase text-align-center">
                   <a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
                 </h1>
@@ -61,7 +68,8 @@ if (have_posts()) {
             </aside>
           </div>
         </article>
-
+      </div>
+    </div>
 <?php
   }
 } else {

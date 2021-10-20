@@ -68,11 +68,26 @@ body
 
 $color-black = rgb(0, 0, 0)
 $color-white = rgb(255, 255, 255)
+$color-bone = rgb(244, 243, 234)
+$color-light-gray = rgb(206, 206, 208)
 $color-dark-gray = rgb(39, 39, 39)
 $color-green = rgb(121, 177, 156)
 $color-dark-green = rgb(24, 35, 31)
 $color-red = rgb(230, 90, 65)
 $color-yellow= rgb(244, 175, 75)
+
+.color-black
+  color: $color-black
+
+.color-red
+  color: $color-red
+
+.background-red
+  background-color: $color-red
+
+.color-bone
+  color: $color-bone
+
 
 // ******************************************************
 
@@ -91,6 +106,13 @@ img
 
 .desktop-only
   display: none !important
+
+
+// ******************************************************
+
+// CUSTOM UTILITIES
+.spacing-wide
+  letter-spacing: 0.3rem
 
 // ******************************************************
 

@@ -53,6 +53,15 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
   li:last-child
     border-right: none
 
+// --------------------- Footer
+#footer
+  color: $color-white
+  background: $color-dark-gray
+
+  p
+    margin: 0
+
+
 // --------------------- Single
 .single
   .header-image-holder
@@ -79,6 +88,9 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
       display: block
       z-index: 101
       position: relative
+
+    img
+      width: 100%
 
   .title-holder
     position: absolute;
@@ -116,9 +128,37 @@ font-sizes($font-size-basic, $font-size-extra, $font-size-large, $font-size-mid,
       &:last-child:after
         content: ''
 
+.single-category-menu
+  border-bottom: 2px solid $color-light-gray
+  .category-link
+    padding: 0
+    &:after
+      content: '|'
+      margin: 0 $margin-small
+
+    &:last-child:after
+      content: ''
+
+    a:hover,
+    &.selected-category a
+      color: $color-red
+
 .related-posts
   background: $color-green
-  color: $color-white
 
   p
     margin: 0
+
+.posts-grid
+  .image-wrapper
+    position: relative
+
+  .category-label
+    padding: 0.2rem 1rem
+    position: absolute
+    top: 0
+    left: 0
+    transform-origin: 0 0
+    transform: rotate(-90deg) translate('calc(-100% + 1px)' % (), 0)
+
+
